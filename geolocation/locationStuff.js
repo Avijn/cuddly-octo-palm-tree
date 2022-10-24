@@ -5,10 +5,12 @@ function getLocation()
 {
     navigator.geolocation.getCurrentPosition(position => {
         const {longitude, latitude} = position.coords
+        const {timestamp} = position
 
         const dbObj = {
             latitude: latitude,
-            longitude: longitude
+            longitude: longitude,
+            GmtTimestamp: timestamp
         }
 
         console.log(dbObj)
