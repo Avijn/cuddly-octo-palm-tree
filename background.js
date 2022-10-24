@@ -3,7 +3,4 @@ chrome.runtime.onInstalled.addListener(() => {
     // getCurrentUserLocation()
 });
 
-function getCurrentUserLocation()
-{
-    getLocation()
-}
+console.log('everything loaded')
