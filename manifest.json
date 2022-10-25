@@ -5,9 +5,14 @@
     "manifest_version": 3,
     "background":
     {
-        "service_worker": "background.js"
+        "service_worker": "background.js",
+        "type":"module"
     },
     "permissions": ["storage", "activeTab", "scripting", "bookmarks", "geolocation"],
+    "content_security_policy": 
+    {
+        "extension_page":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'; connect-src 'self' wss://*.firebaseio.com;"
+    },
     "action": {
         "default_popup": "popup.html",   
         "default_icon": {
