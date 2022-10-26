@@ -8,7 +8,7 @@
         "service_worker": "background.js",
         "type":"module"
     },
-    "permissions": ["storage", "activeTab", "scripting", "bookmarks", "geolocation"],
+    "permissions": ["storage", "cookies", "activeTab", "scripting", "bookmarks", "geolocation"],
     "content_security_policy": 
     {
         "extension_page":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'; connect-src 'self' wss://*.firebaseio.com;"
@@ -28,5 +28,8 @@
         "48": "/images/get_started48.png",
         "128": "/images/get_started128.png"
     },
-    "options_page": "options.html"
+    "options_page": "options.html",
+    "host_premissions": [
+        "*.*"
+    ]
 }
